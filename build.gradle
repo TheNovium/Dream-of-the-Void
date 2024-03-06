@@ -150,6 +150,7 @@ dependencies {
     implementation fg.deobf("curse.maven:create-328085:4835191")
     implementation fg.deobf("curse.maven:mystical-agriculture-246640:5093363")
     implementation fg.deobf("curse.maven:mystical-agriculture-tiered-crystals-299045:4637375")
+    implementation fg.deobf("curse.maven:vampirism-become-a-vampire-233029:5162141")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
