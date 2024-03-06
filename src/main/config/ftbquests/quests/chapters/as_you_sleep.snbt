@@ -1,0 +1,197 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "as_you_sleep"
+	group: ""
+	icon: "minecraft:red_bed"
+	id: "59C128F81759A061"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"You can tell that this is no normal dream. You know you're asleep, but you can't seem to wake up. There's a voice in the back of your head that seems to be guiding you."
+				"Somehow you know that you must follow this voice to have any chance of returning to reality."
+			]
+			id: "0FCE71651A4E9BA6"
+			rewards: [
+				{
+					count: 64
+					id: "6F946872E201BBD8"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					id: "3ABDCAAF35A2C1AC"
+					item: "create:goggles"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "As you drift off, you find yourself in a new, strange world. Everything seems different, as if the laws of reality were re-written overnight."
+			tasks: [{
+				id: "578E1143F73D6752"
+				title: "Drifting off..."
+				type: "checkmark"
+			}]
+			title: "Into your Subconscious"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: [
+				"It seems slightly unnerving, your thoughts seem to have a... shape to them. You know that these shapes have meanings."
+				""
+				"Circles are information"
+				""
+				"Gears are important steps in waking up from this dream"
+				""
+				"Squares are for progression items"
+				""
+				"Hexagons are items or processes that you should automate"
+			]
+			id: "7415AEDCAEEC1F42"
+			rewards: [{
+				id: "1A8325A762616923"
+				item: "minecraft:wheat_seeds"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4593194FD1C3A344"
+				title: "The shapes..."
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: ["This is an expert-like modpack. Almost all the recipes are changed, and progression is significantly different than vanilla minecraft. Take your time, make sure to automate when you can, and use tools like JEI to your advantage!"]
+			id: "123BA07F2F22C6D5"
+			rewards: [{
+				id: "066A7BDE60DBBD70"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "46F53C54B51FAC0D"
+				title: "Expert-Like"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: ["Mods are not unlocked as stages, rather progression requires the use of multiple mods together. As you progress, more advanced features from all sorts of mods will be unlocked, so check your recipes for new and better ways to automate things!"]
+			id: "522F87BCCDE524FE"
+			tasks: [{
+				id: "27C854F3F991047A"
+				title: "Stages"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: ["This is my first modpack, so any feedback is appreciated!"]
+			id: "67E4AEE50330A0DE"
+			rewards: [
+				{
+					id: "3FE71B6FCCE52F97"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+				{
+					id: "42061FA9292C391E"
+					item: "minecraft:spruce_sapling"
+					type: "item"
+				}
+				{
+					id: "14F09A81D88E4C13"
+					item: "minecraft:birch_sapling"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "787F9D18D0141129"
+					item: "minecraft:jungle_sapling"
+					type: "item"
+				}
+				{
+					id: "77A015D3FE8CC0EE"
+					item: "minecraft:acacia_sapling"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "260881E4B0315B74"
+					item: "minecraft:dark_oak_sapling"
+					type: "item"
+				}
+				{
+					id: "6FA52CA4A2706E8E"
+					item: "minecraft:cherry_sapling"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "597162E44651E221"
+				title: "My First Modpack"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: ["The early game is going to be quite different. Right click some dirt or grass with an empty hand to get some stone essence."]
+			id: "5CF871FC9F1A9E13"
+			tasks: [{
+				count: 64L
+				id: "6AEC52DF269AC24C"
+				item: "mysticalagriculture:stone_essence"
+				type: "item"
+			}]
+			title: "You dream of Crafting"
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0FCE71651A4E9BA6"]
+			description: ["Nobody likes going hungry! Right click on a log to obtain some wood essence."]
+			id: "565822D784142F3A"
+			rewards: [
+				{
+					id: "410F2A4F8182772B"
+					item: {
+						Count: 1b
+						id: "minecraft:wooden_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4470B4C13AF15FD8"
+					item: "minecraft:lily_pad"
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 64L
+				id: "110E6CCDDE57AEBC"
+				item: "mysticalagriculture:wood_essence"
+				type: "item"
+			}]
+			title: "You dream of Farming"
+			x: 2.5d
+			y: 2.5d
+		}
+	]
+	title: "As You Sleep"
+}
