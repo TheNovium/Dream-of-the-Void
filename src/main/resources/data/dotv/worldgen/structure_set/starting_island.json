@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dotv:starting_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 2,
+    "separation": 1,
+    "salt": 1234567890
+  }
+}
