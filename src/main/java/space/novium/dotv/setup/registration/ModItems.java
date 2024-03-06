@@ -6,5 +6,5 @@ import net.minecraftforge.registries.ForgeRegistries;
 import space.novium.dotv.DotVMod;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DotVMod.MODID);{
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DotVMod.MODID);
 }
