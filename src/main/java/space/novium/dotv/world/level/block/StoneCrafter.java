@@ -41,5 +41,4 @@ public class StoneCrafter extends Block implements EntityBlock {
             return InteractionResult.PASS;
         }
     }
-    
 }

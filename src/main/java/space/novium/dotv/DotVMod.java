@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import space.novium.dotv.setup.ModTags;
+import space.novium.dotv.setup.registration.ModBlockEntities;
 import space.novium.dotv.setup.registration.ModBlocks;
 import space.novium.dotv.setup.registration.ModItems;
 import space.novium.dotv.setup.registration.ModStructures;
@@ -23,6 +24,7 @@ public class DotVMod {
         
         ModStructures.STRUCTURE_REGISTRY.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
     }
     
