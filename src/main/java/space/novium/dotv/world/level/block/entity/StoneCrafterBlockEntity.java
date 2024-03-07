@@ -66,4 +66,19 @@ public class StoneCrafterBlockEntity extends BlockEntity {
         }
         return true;
     }
+    
+    public ItemStack getItemAt(int location){
+        return location < items.getContainerSize() && location >= 0 ? items.getItem(location) : ItemStack.EMPTY;
+    }
+    
+    public int itemCount(){
+        int count = 0;
+        for(int i = 0; i < items.getContainerSize(); ++i){
+            if(items.getItem(i).isEmpty()){
+                break;
+            }
+            ++count;
+        }
+        return count;
+    }
 }
