@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/stone",
+    "east": "dotv:block/stone_crafter_side",
+    "north": "dotv:block/stone_crafter_side",
+    "particle": "dotv:block/stone_crafter_side",
+    "south": "dotv:block/stone_crafter_side",
+    "up": "dotv:block/stone_crafter_top",
+    "west": "dotv:block/stone_crafter_side"
+  }
+}
