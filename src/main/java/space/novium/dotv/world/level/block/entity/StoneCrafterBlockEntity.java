@@ -45,7 +45,6 @@ public class StoneCrafterBlockEntity extends BlockEntity {
             player.level().playSound(player, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, 1.0f, 1.0f);
             for(int i = 0; i < items.getContainerSize(); ++i){
                 ItemStack currentSlot = items.getItem(i);
-                System.out.println("Trying to add to slot " + i + " with a total slots of " + items.getContainerSize());
                 if(currentSlot.isEmpty()){
                     items.setItem(i, stack.split(1));
                     level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, getBlockState()));
