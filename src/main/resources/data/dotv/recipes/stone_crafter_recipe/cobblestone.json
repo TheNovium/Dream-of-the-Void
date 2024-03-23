@@ -1,0 +1,15 @@
+{
+  "type": "dotv:stone_crafter_recipe",
+  "ingredients": [
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence",
+    "mysticalagriculture:stone_essence"
+  ],
+  "complete": "minecraft:dirt",
+  "result": "minecraft:cobblestone"
+}
