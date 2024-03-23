@@ -14,11 +14,14 @@ import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import space.novium.dotv.DotVMod;
 import space.novium.dotv.setup.registration.ModRecipeSerializer;
+import space.novium.dotv.setup.registration.ModRecipeTypes;
 import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
 
 import java.util.ArrayList;
@@ -76,7 +79,12 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipeSerializer.STONE_CRAFTER_RECIPE;
+        return ModRecipeSerializer.STONE_CRAFTER_RECIPE.get();
+    }
+    
+    @Override
+    public @NotNull RecipeType<?> getType() {
+        return ModRecipeTypes.STONE_CRAFTER_TYPE;
     }
     
     public static class Serializer implements RecipeSerializer<StoneCrafterRecipe> {
