@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 import space.novium.dotv.DotVMod;
 import space.novium.dotv.setup.registration.ModRecipeSerializer;
 import space.novium.dotv.setup.registration.ModRecipeTypes;
+import space.novium.dotv.util.recipe.RecipeUtil;
 import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
 
 import java.util.ArrayList;
@@ -57,7 +58,7 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
                 inputItems.add(itemStack);
             }
         }
-        return inputs.size() == inputItems.size() && contents.canCraft(this, null);
+        return inputs.size() == inputItems.size() && RecipeUtil.canCraftWith(inputs, container);
     }
     
     @Override

@@ -46,8 +46,7 @@ public class StoneCrafterRenderer implements BlockEntityRenderer<StoneCrafterBlo
             }
         }
         Optional<IStoneCrafterRecipe> recipe = entity.getLevel().getRecipeManager().getRecipeFor(ModRecipeTypes.STONE_CRAFTER_TYPE,  entity.getItems(), entity.getLevel());
-        if(recipe.isPresent() && !recipe.get().isIncomplete()){
-            System.out.println("Incomplete? " + recipe.get().isIncomplete());
+        if(recipe.isPresent() && recipe.get().matches(entity.getItems(), entity.getLevel())){
             StoneCrafterRecipe r = (StoneCrafterRecipe) recipe.get();
             ItemStack complete = r.getCompleteItem().getItems()[0];
             pose.pushPose();
