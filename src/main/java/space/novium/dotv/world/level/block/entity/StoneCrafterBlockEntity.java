@@ -1,8 +1,15 @@
 package space.novium.dotv.world.level.block.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
@@ -11,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import org.jetbrains.annotations.Nullable;
 import space.novium.dotv.setup.registration.ModBlockEntities;
 
 public class StoneCrafterBlockEntity extends BlockEntity {
@@ -54,6 +62,7 @@ public class StoneCrafterBlockEntity extends BlockEntity {
             }
             return InteractionResult.PASS;
         }
+        setChanged();
         return tryRemoveLastItem(player);
     }
     
@@ -81,7 +90,61 @@ public class StoneCrafterBlockEntity extends BlockEntity {
         return count;
     }
     
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        loadClientData(tag);
+    }
     
+    private void loadClientData(CompoundTag tag){
+        NonNullList<ItemStack> loadItems = NonNullList.withSize(items.getContainerSize(), ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(tag, loadItems);
+        for(ItemStack stack : loadItems){
+            items.addItem(stack);
+        }
+    }
+    
+    @Override
+    protected void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+        saveClientData(tag);
+    }
+    
+    private void saveClientData(CompoundTag tag){
+        NonNullList<ItemStack> saveItems = NonNullList.withSize(items.getContainerSize(), ItemStack.EMPTY);
+        for(int i = 0; i < itemCount(); i++){
+            saveItems.set(i, items.getItem(i));
+        }
+        ContainerHelper.saveAllItems(tag, saveItems);
+    }
+    
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = super.getUpdateTag();
+        saveClientData(tag);
+        return tag;
+    }
+    
+    @Override
+    public void handleUpdateTag(CompoundTag tag) {
+        if(tag != null){
+            loadClientData(tag);
+        }
+    }
+    
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+    
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        CompoundTag tag = pkt.getTag();
+        if(tag != null){
+            handleUpdateTag(tag);
+        }
+    }
     
     public SimpleContainer getItems() {
         return items;
