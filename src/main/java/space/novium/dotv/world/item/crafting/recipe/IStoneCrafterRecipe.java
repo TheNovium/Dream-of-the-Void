@@ -14,6 +14,8 @@ public interface IStoneCrafterRecipe extends Recipe<Container> {
     
     Ingredient getCompleteItem();
     
+    Ingredient getOutputItem();
+    
     @Override
     default @NotNull RecipeType<?> getType(){
         return BuiltInRegistries.RECIPE_TYPE.get(TYPE_ID);

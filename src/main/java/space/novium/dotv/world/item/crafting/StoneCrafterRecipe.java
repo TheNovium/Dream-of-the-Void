@@ -49,6 +49,11 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     }
     
     @Override
+    public Ingredient getOutputItem() {
+        return Ingredient.of(output);
+    }
+    
+    @Override
     public boolean matches(Container container, Level level) {
         StackedContents contents = new StackedContents();
         List<ItemStack> inputItems = new ArrayList<>();

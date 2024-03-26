@@ -13,6 +13,7 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -20,6 +21,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.Nullable;
 import space.novium.dotv.setup.registration.ModBlockEntities;
+import space.novium.dotv.setup.registration.ModRecipeTypes;
+import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
+
+import java.util.Optional;
 
 public class StoneCrafterBlockEntity extends BlockEntity {
     private final SimpleContainer items = new SimpleContainer(8){
@@ -51,6 +56,15 @@ public class StoneCrafterBlockEntity extends BlockEntity {
         ItemStack stack = player.getItemInHand(hand);
         if(!stack.isEmpty()){
             player.level().playSound(player, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, 1.0f, 1.0f);
+            Optional<IStoneCrafterRecipe> recipe = getLevel().getRecipeManager().getRecipeFor(ModRecipeTypes.STONE_CRAFTER_TYPE, getItems(), getLevel());
+            if(recipe.isPresent() && recipe.get().matches(items, getLevel()) && recipe.get().getCompleteItem().getItems()[0].is(stack.getItem())){
+                stack.split(1);
+                level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, getBlockState()));
+                items.clearContent();
+                level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY() + 1, pos.getZ(), recipe.get().getOutputItem().getItems()[0]));
+                setChanged();
+                return InteractionResult.SUCCESS;
+            }
             for(int i = 0; i < items.getContainerSize(); ++i){
                 ItemStack currentSlot = items.getItem(i);
                 if(currentSlot.isEmpty()){
