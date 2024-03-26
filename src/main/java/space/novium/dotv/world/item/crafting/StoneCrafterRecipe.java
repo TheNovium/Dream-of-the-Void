@@ -105,7 +105,6 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
         
         private static NonNullList<Ingredient> itemsFromJson(JsonArray json){
             NonNullList<Ingredient> list = NonNullList.create();
-            System.out.println("SOTL: " + json.size());
             for(int i = 0; i < json.size(); i++){
                 Ingredient ingredient = Ingredient.fromJson(json.get(i), false);
                     if(!ingredient.isEmpty()){

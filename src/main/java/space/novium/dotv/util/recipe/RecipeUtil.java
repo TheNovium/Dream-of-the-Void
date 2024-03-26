@@ -19,7 +19,6 @@ public class RecipeUtil {
         }
         for(Ingredient ingredient : ingredients){
             if(addToMap(itemCount, ingredient, -1) < 0){
-                System.out.println("Cannot craft! Missing " + ingredient.toJson());
                 return false;
             }
         }
