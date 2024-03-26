@@ -26,6 +26,10 @@
       "item": "mysticalagriculture:stone_essence"
     }
   ],
-  "complete": "minecraft:dirt",
-  "result": "minecraft:cobblestone"
+  "complete": {
+    "item": "minecraft:dirt"
+  },
+  "result": {
+    "item": "minecraft:cobblestone"
+  }
 }

@@ -1,0 +1,35 @@
+{
+  "type": "dotv:stone_crafter_recipe",
+  "ingredients": [
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    }
+  ],
+  "complete": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": {
+    "item": "minecraft:moss_block"
+  }
+}
