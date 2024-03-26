@@ -11,7 +11,12 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import space.novium.dotv.setup.registration.ModRecipeTypes;
+import space.novium.dotv.world.item.crafting.StoneCrafterRecipe;
+import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
 import space.novium.dotv.world.level.block.entity.StoneCrafterBlockEntity;
+
+import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
 public class StoneCrafterRenderer implements BlockEntityRenderer<StoneCrafterBlockEntity> {
@@ -39,6 +44,17 @@ public class StoneCrafterRenderer implements BlockEntityRenderer<StoneCrafterBlo
                 renderer.renderStatic(currentItem, ItemDisplayContext.FIXED, LightTexture.FULL_BRIGHT, overlay, pose, buffer, entity.getLevel(), loc);
                 pose.popPose();
             }
+        }
+        Optional<IStoneCrafterRecipe> recipe = entity.getLevel().getRecipeManager().getRecipeFor(ModRecipeTypes.STONE_CRAFTER_TYPE,  entity.getItems(), entity.getLevel());
+        if(recipe.isPresent() && !recipe.get().isIncomplete()){
+            System.out.println("Incomplete? " + recipe.get().isIncomplete());
+            StoneCrafterRecipe r = (StoneCrafterRecipe) recipe.get();
+            ItemStack complete = r.getCompleteItem().getItems()[0];
+            pose.pushPose();
+            pose.translate(0.5f, 1.00f, 0.5f);
+            pose.scale(0.5f, 0.5f, 0.5f);
+            renderer.renderStatic(complete, ItemDisplayContext.FIXED, LightTexture.FULL_BRIGHT, overlay, pose, buffer, entity.getLevel(), loc);
+            pose.popPose();
         }
     }
 }

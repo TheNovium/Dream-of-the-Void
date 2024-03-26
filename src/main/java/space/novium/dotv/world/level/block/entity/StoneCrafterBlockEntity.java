@@ -80,4 +80,10 @@ public class StoneCrafterBlockEntity extends BlockEntity {
         }
         return count;
     }
+    
+    
+    
+    public SimpleContainer getItems() {
+        return items;
+    }
 }

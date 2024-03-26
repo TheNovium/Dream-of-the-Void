@@ -50,16 +50,14 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     @Override
     public boolean matches(Container container, Level level) {
         StackedContents contents = new StackedContents();
-        List<ItemStack> inputs = new ArrayList<>();
-        int i = 0;
+        List<ItemStack> inputItems = new ArrayList<>();
         for(int j = 0; j < container.getContainerSize(); ++j){
             ItemStack itemStack = container.getItem(j);
             if(!itemStack.isEmpty()){
-                ++i;
-                inputs.add(itemStack);
+                inputItems.add(itemStack);
             }
         }
-        return i == inputs.size() && contents.canCraft(this, null);
+        return inputs.size() == inputItems.size() && contents.canCraft(this, null);
     }
     
     @Override
@@ -106,7 +104,7 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
         
         private static NonNullList<Ingredient> itemsFromJson(JsonArray json){
             NonNullList<Ingredient> list = NonNullList.create();
-            
+            System.out.println("SOTL: " + json.size());
             for(int i = 0; i < json.size(); i++){
                 Ingredient ingredient = Ingredient.fromJson(json.get(i), false);
                     if(!ingredient.isEmpty()){
@@ -120,12 +118,9 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
         public @Nullable StoneCrafterRecipe fromNetwork(ResourceLocation loc, FriendlyByteBuf buffer) {
             int ingredientCount = buffer.readVarInt();
             NonNullList<Ingredient> list = NonNullList.withSize(ingredientCount, Ingredient.EMPTY);
-            for(int i = 0; i < list.size(); i++){
-                list.set(i, Ingredient.fromNetwork(buffer));
-            }
+            list.replaceAll(ignored -> Ingredient.fromNetwork(buffer));
             ItemStack itemComplete = buffer.readItem();
             ItemStack itemResult = buffer.readItem();
-            
             return new StoneCrafterRecipe(loc, itemResult, itemComplete, list);
         }
     

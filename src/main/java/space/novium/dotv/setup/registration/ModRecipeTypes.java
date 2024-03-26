@@ -5,9 +5,8 @@ import net.minecraft.world.item.crafting.RecipeType;
 import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
 
 public class ModRecipeTypes {
-    public static final RecipeType<IStoneCrafterRecipe> STONE_CRAFTER_TYPE = new ModRecipeType<>();
+    public static final RecipeType<IStoneCrafterRecipe> STONE_CRAFTER_TYPE = new ModRecipeType<>("stone_crafter_recipe");
     
-    private static class ModRecipeType<T extends Recipe<?>> implements RecipeType<T> {
-        private ModRecipeType(){}
+    private record ModRecipeType<T extends Recipe<?>>(String ID) implements RecipeType<T> {
     }
 }
