@@ -1,0 +1,35 @@
+{
+  "type": "dotv:stone_crafter_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "complete": {
+    "item": "minecraft:bucket"
+  },
+  "result": {
+    "item": "minecraft:water_bucket"
+  }
+}

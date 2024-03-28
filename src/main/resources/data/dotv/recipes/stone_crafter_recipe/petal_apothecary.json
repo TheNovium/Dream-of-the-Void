@@ -1,0 +1,26 @@
+{
+  "type": "dotv:stone_crafter_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "complete": {
+    "item": "mysticalagriculture:wood_essence"
+  },
+  "result": {
+    "item": "botania:apothecary_default"
+  }
+}
