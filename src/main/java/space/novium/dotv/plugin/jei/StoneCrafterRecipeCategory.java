@@ -64,7 +64,6 @@ public class StoneCrafterRecipeCategory implements IRecipeCategory<IStoneCrafter
         for(int i = 0; i < inputs.size(); i++){
             float deg = 2.0f * (float)Math.PI * (((float) i) / totalItems);
             
-            System.out.println(i);
             builder.addSlot(RecipeIngredientRole.INPUT, (int)Math.round(Math.sin(deg) * 30.0f) + 32, (int)Math.round(Math.cos(deg) * 30.0f) + 32).addIngredients(inputs.get(i));
         }
         builder.addSlot(RecipeIngredientRole.INPUT, 33, 33).addIngredients(complete);

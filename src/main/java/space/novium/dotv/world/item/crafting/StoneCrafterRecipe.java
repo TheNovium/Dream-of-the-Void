@@ -63,7 +63,7 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
                 inputItems.add(itemStack);
             }
         }
-        return inputs.size() == inputItems.size() && RecipeUtil.canCraftWith(inputs, container);
+        return inputItems.size() > 0 && inputs.size() == inputItems.size() && RecipeUtil.canCraftWith(inputs, container);
     }
     
     @Override
