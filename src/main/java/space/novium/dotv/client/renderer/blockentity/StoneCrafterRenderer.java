@@ -49,10 +49,13 @@ public class StoneCrafterRenderer implements BlockEntityRenderer<StoneCrafterBlo
         if(recipe.isPresent() && recipe.get().matches(entity.getItems(), entity.getLevel())){
             StoneCrafterRecipe r = (StoneCrafterRecipe) recipe.get();
             ItemStack complete = r.getCompleteItem().getItems()[0];
+            ItemStack result = r.getOutputItem().getItems()[0];
             pose.pushPose();
-            pose.translate(0.5f, 1.00f, 0.5f);
-            pose.scale(0.5f, 0.5f, 0.5f);
+            pose.translate(0.25f, 1.00f, 0.5f);
+            pose.scale(0.25f, 0.25f, 0.25f);
             renderer.renderStatic(complete, ItemDisplayContext.FIXED, LightTexture.FULL_BRIGHT, overlay, pose, buffer, entity.getLevel(), loc);
+            pose.translate(2.0f, 0.0f, 0.0f);
+            renderer.renderStatic(result, ItemDisplayContext.FIXED, LightTexture.FULL_BRIGHT, overlay, pose, buffer, entity.getLevel(), loc);
             pose.popPose();
         }
     }
