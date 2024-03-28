@@ -1,6 +1,7 @@
 package space.novium.dotv.world.level.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +27,16 @@ public class StoneCrafter extends Block implements EntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state){
         return new StoneCrafterBlockEntity(pos, state);
+    }
+    
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState cstate, boolean p_60519_) {
+        if(!state.is(cstate.getBlock())){
+            BlockEntity entity = level.getBlockEntity(pos);
+            if(entity instanceof StoneCrafterBlockEntity){
+                Containers.dropContents(level, pos, ((StoneCrafterBlockEntity) entity).getItems());
+            }
+        }
     }
     
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit){
