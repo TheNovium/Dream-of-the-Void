@@ -1,4 +1,5 @@
 {
   "block.dotv.stone_crafter": "Stone Crafter",
-  "item.dotv.stone_crafter": "Stone Crafter"
+  "item.dotv.stone_crafter": "Stone Crafter",
+  "jei.category.dotv.stone_crafter_recipe_category": "Stone Crafter Recipes"
 }

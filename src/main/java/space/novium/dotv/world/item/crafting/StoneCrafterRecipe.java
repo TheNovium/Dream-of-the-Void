@@ -67,6 +67,11 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     }
     
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputs;
+    }
+    
+    @Override
     public ItemStack assemble(Container p_44001_, RegistryAccess p_267165_) {
         return null;
     }
