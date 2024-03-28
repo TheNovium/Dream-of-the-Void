@@ -1,0 +1,23 @@
+{
+  "type": "botania:petal_apothecary",
+  "ingredients": [
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "mysticalagriculture:stone_essence"
+    },
+    {
+      "item": "mysticalagriculture:stone_essence"
+    },
+    {
+      "item": "mysticalagriculture:wood_essence"
+    }
+  ],
+  "output": {
+    "item": "dotv:mana_infused_stone"
+  },
+  "reagent": {
+    "item": "minecraft:cobblestone"
+  }
+}

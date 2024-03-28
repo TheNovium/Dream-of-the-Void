@@ -10,5 +10,9 @@ import space.novium.dotv.DotVMod;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DotVMod.MODID);
     
+    //Items
+    public static final RegistryObject<Item> MANA_INFUSED_STONE = ITEMS.register("mana_infused_stone", () -> new Item(new Item.Properties()));
+    
+    //Block Items
     public static final RegistryObject<Item> STONE_CRAFTER_ITEM = ITEMS.register("stone_crafter", () -> new BlockItem(ModBlocks.STONE_CRAFTER.get(), new Item.Properties()));
 }
