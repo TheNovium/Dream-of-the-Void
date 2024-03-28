@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EE",
+    "EE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:wood_essence"
+    }
+  },
+  "result": {
+    "item": "dotv:mystical_seeds",
+    "count": 1
+  }
+}
