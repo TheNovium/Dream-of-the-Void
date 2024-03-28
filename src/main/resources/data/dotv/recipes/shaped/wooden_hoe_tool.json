@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "E ",
+    " E"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:wood_essence"
+    }
+  },
+  "result": {
+    "item": "dotv:wooden_hoe_tool",
+    "count": 1
+  }
+}
