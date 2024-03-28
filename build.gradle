@@ -137,13 +137,17 @@ dependencies {
     implementation fg.deobf("curse.maven:ftb-library-forge-404465:5051953")
     implementation fg.deobf("curse.maven:ftb-teams-forge-404468:4623116")
     implementation fg.deobf("curse.maven:patchouli-306770:4966125")
+    implementation fg.deobf("curse.maven:placebo-283644:5098182")
 
     //Useful mods
+    implementation fg.deobf("curse.maven:apothic-attributes-898963:5209162")
     implementation fg.deobf("curse.maven:ftb-quests-forge-289412:5084753")
     implementation fg.deobf("curse.maven:jei-238222:5101366")
     implementation fg.deobf("curse.maven:wthit-forge-455982:5151128")
 
     //Additive mods
+    implementation fg.deobf("curse.maven:apotheosis-313970:5209354")
+    implementation fg.deobf("curse.maven:applied-energistics-2-223794:5169355")
     implementation fg.deobf("curse.maven:botania-225643:5002307")
     implementation fg.deobf("curse.maven:botany-pots-353928:5097409")
     implementation fg.deobf("curse.maven:botany-pots-tiers-526754:4926013")
