@@ -9,7 +9,6 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,8 +55,14 @@ public class MysticalSeeds extends Item {
     static {
         SEEDS_CAN_PLANT_ON = new HashMap<>();
         WATER_SEEDS_CAN_PLANT_ON = new HashMap<>();
+        
+        Item[] waterCrops = new Item[]{Items.KELP, Items.BRAIN_CORAL_FAN, Items.BUBBLE_CORAL_FAN, Items.FIRE_CORAL_FAN, Items.HORN_CORAL_FAN, Items.TUBE_CORAL_FAN};
+        
         registerSeedsByBlock(Blocks.FARMLAND, Items.BEETROOT_SEEDS, Items.CARROT, Items.POTATO, Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS);
         registerSeedsByBlock(Blocks.SAND, Items.SUGAR_CANE, Items.CACTUS);
-        registerSeedsByBlock(Blocks.DIRT, false, Items.KELP, Items.BRAIN_CORAL_FAN, Items.BUBBLE_CORAL_FAN, Items.FIRE_CORAL_FAN, Items.HORN_CORAL_FAN, Items.TUBE_CORAL_FAN);
+        registerSeedsByBlock(Blocks.GRASS_BLOCK, Items.BAMBOO, Items.ACACIA_SAPLING, Items.BIRCH_SAPLING, Items.CHERRY_SAPLING, Items.DARK_OAK_SAPLING, Items.JUNGLE_SAPLING, Items.OAK_SAPLING, Items.SPRUCE_SAPLING);
+        registerSeedsByBlock(Blocks.DIRT, false, waterCrops);
+        registerSeedsByBlock(Blocks.SAND, false, waterCrops);
+        registerSeedsByBlock(Blocks.GRAVEL, false, Items.KELP);
     }
 }
