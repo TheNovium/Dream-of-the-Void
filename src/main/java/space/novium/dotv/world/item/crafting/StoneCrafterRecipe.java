@@ -30,9 +30,9 @@ import java.util.List;
 
 public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     private final ResourceLocation id;
-    private final ItemStack output;
-    private final NonNullList<Ingredient> inputs;
-    private final ItemStack complete;
+    protected final ItemStack output;
+    protected final NonNullList<Ingredient> inputs;
+    protected final ItemStack complete;
     public static final int MAX_SIZE = 8;
     
     public StoneCrafterRecipe(ResourceLocation id, ItemStack output, ItemStack complete, NonNullList<Ingredient> inputs){
@@ -55,7 +55,6 @@ public class StoneCrafterRecipe implements IStoneCrafterRecipe {
     
     @Override
     public boolean matches(Container container, Level level) {
-        StackedContents contents = new StackedContents();
         List<ItemStack> inputItems = new ArrayList<>();
         for(int j = 0; j < container.getContainerSize(); ++j){
             ItemStack itemStack = container.getItem(j);
