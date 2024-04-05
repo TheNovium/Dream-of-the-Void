@@ -1,6 +1,5 @@
 package space.novium.dotv.plugin.jei;
 
-import com.blakebr0.cucumber.util.Localizable;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -23,6 +22,7 @@ import space.novium.dotv.world.item.crafting.recipe.IStoneCrafterRecipe;
 public class StoneCrafterRecipeCategory implements IRecipeCategory<IStoneCrafterRecipe> {
     private static final ResourceLocation BG_TEXTURE = DotVMod.modResourceLocation("textures/jei/stone_crafter.png");
     public static final ResourceLocation CATEGORY_ID = DotVMod.modResourceLocation("stone_crafter_recipe_category");
+    public static final ResourceLocation SPECIAL_CATEGORY_ID = DotVMod.modResourceLocation("special_stone_crafter_recipe_category");
     private final IDrawable background;
     private final IDrawable icon;
     
@@ -38,7 +38,7 @@ public class StoneCrafterRecipeCategory implements IRecipeCategory<IStoneCrafter
     
     @Override
     public Component getTitle() {
-        return Localizable.of("jei.category.dotv.stone_crafter_recipe_category").build();
+        return Component.translatable("jei.category.dotv.stone_crafter_recipe_category");
     }
     
     @Override
