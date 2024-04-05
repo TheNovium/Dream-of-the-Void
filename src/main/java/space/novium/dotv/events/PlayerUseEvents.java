@@ -20,7 +20,7 @@ import space.novium.dotv.setup.ModTags;
 public class PlayerUseEvents {
     @SubscribeEvent
     public static void playerRightClickBlock(PlayerInteractEvent.RightClickBlock e){
-        if(e.getItemStack().equals(ItemStack.EMPTY)  && e.getSide().isServer() && e.getUseBlock() != Event.Result.ALLOW){
+        if(e.getItemStack().equals(ItemStack.EMPTY)  && e.getSide().isServer() && e.getUseBlock() != Event.Result.ALLOW && e.getEntity().isCrouching()){
             Level level = e.getLevel();
             BlockPos pos = e.getPos();
             BlockState block = level.getBlockState(pos);
