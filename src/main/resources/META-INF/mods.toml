@@ -170,6 +170,12 @@ description='''${mod_description}'''
     ordering="BEFORE"
     side="BOTH"
 [[dependencies.${mod_id}]]
+    modId="ars_nouveau"
+    mandatory=true
+    versionRange="[4.10.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
     modId="botanypots"
     mandatory=true
     versionRange="[13.0.23,)"
@@ -186,6 +192,12 @@ description='''${mod_description}'''
     mandatory=true
     versionRange="[0.5.1.f,)"
     ordering="AFTER"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="extendedcrafting"
+    mandatory=true
+    versionRange="[6.0.7,)"
+    ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="mysticalagriculture"
