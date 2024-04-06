@@ -140,8 +140,8 @@ description='''${mod_description}'''
 [[dependencies.${mod_id}]]
     modId="jei"
     mandatory=true
-    versionRange="[15.3.0.4,)"
-    ordering="BEFORE"
+    versionRange="[15.2.0.27,)"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="ftbquests"

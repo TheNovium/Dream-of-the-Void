@@ -136,7 +136,9 @@ dependencies {
     //API
     implementation fg.deobf("curse.maven:architectury-api-419699:5137938")
     implementation fg.deobf("curse.maven:badpackets-615134:4784395")
+    implementation fg.deobf("curse.maven:balm-531761:5140912")
     implementation fg.deobf("curse.maven:bookshelf-228525:5084135")
+    implementation fg.deobf("curse.maven:cloth-config-348521:4973441")
     implementation fg.deobf("curse.maven:cucumber-272335:4990314")
     implementation fg.deobf("curse.maven:curios-309927:5086821")
     implementation fg.deobf("curse.maven:ftb-library-forge-404465:5051953")
@@ -151,8 +153,11 @@ dependencies {
 
     //Useful mods
     implementation fg.deobf("curse.maven:apothic-attributes-898963:5209162")
+    implementation fg.deobf("curse.maven:configured-457570:5180900")
     implementation fg.deobf("curse.maven:ftb-quests-forge-289412:5084753")
-    implementation fg.deobf("curse.maven:jei-238222:5101366")
+    implementation fg.deobf("curse.maven:jei-238222:4712868")
+    implementation fg.deobf("curse.maven:mouse-tweaks-60089:4581240")
+    implementation fg.deobf("curse.maven:roughly-enough-items-310111:4951142")
     implementation fg.deobf("curse.maven:wthit-forge-455982:5151128")
 
     //Additive mods
@@ -162,10 +167,17 @@ dependencies {
     implementation fg.deobf("curse.maven:botania-225643:5002307")
     implementation fg.deobf("curse.maven:botany-pots-353928:5097409")
     implementation fg.deobf("curse.maven:botany-pots-tiers-526754:4926013")
+    implementation fg.deobf("curse.maven:construction-wand-399558:4684054")
+    implementation fg.deobf("curse.maven:cooking-for-blockheads-231484:5141447")
     implementation fg.deobf("curse.maven:create-328085:4835191")
     implementation fg.deobf("curse.maven:extended-crafting-268387:5228960")
     implementation fg.deobf("curse.maven:mystical-agriculture-246640:5093363")
     implementation fg.deobf("curse.maven:mystical-agriculture-tiered-crystals-299045:4637375")
+    implementation fg.deobf("curse.maven:pams-harvestcraft-2-crops-361385:4687624")
+    implementation fg.deobf("curse.maven:pams-harvestcraft-2-food-core-372534:5097798")
+    implementation fg.deobf("curse.maven:pams-harvestcraft-2-trees-365460:4625518")
+    implementation fg.deobf("curse.maven:pams-harvestcraft-2-food-extended-402231:5147171")
+    implementation fg.deobf("curse.maven:pretty-pipes-376737:4769646")
     implementation fg.deobf("curse.maven:vampirism-become-a-vampire-233029:5162141")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
