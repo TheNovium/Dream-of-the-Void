@@ -8,6 +8,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -20,7 +21,7 @@ import space.novium.dotv.setup.ModTags;
 public class PlayerUseEvents {
     @SubscribeEvent
     public static void playerRightClickBlock(PlayerInteractEvent.RightClickBlock e){
-        if(e.getItemStack().equals(ItemStack.EMPTY)  && e.getSide().isServer() && e.getUseBlock() != Event.Result.ALLOW && e.getEntity().isCrouching()){
+        if(e.getSide().isServer() && e.getUseBlock() != Event.Result.ALLOW && e.getEntity().isCrouching()){
             Level level = e.getLevel();
             BlockPos pos = e.getPos();
             BlockState block = level.getBlockState(pos);
@@ -31,8 +32,11 @@ public class PlayerUseEvents {
             if(block.is(ModTags.Blocks.WOOD_ESSENCE)){
                 item = ModCrops.WOOD.getEssenceItem();
             }
+            if(block.is(Blocks.CLAY)){
+                item = ModCrops.EARTH.getEssenceItem();
+            }
             if(item != null){
-                level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(item, 1)));
+                level.addFreshEntity(new ItemEntity(level, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, new ItemStack(item, 1)));
                 e.setUseItem(Event.Result.ALLOW);
                 level.playSound(e.getEntity(), pos, SoundEvents.BIG_DRIPLEAF_TILT_DOWN, SoundSource.BLOCKS);
             }
