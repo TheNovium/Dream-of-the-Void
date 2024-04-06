@@ -150,6 +150,11 @@
 			dependencies: ["0FCE71651A4E9BA6"]
 			description: ["The early game is going to be quite different. Right click some dirt or grass with an empty hand to get some stone essence."]
 			id: "5CF871FC9F1A9E13"
+			rewards: [{
+				id: "2724CB2C33E969BD"
+				item: "minecraft:chest"
+				type: "item"
+			}]
 			tasks: [{
 				count: 64L
 				id: "6AEC52DF269AC24C"
@@ -191,6 +196,303 @@
 			title: "You dream of Farming"
 			x: 2.5d
 			y: 2.5d
+		}
+		{
+			dependencies: ["5CF871FC9F1A9E13"]
+			description: ["This doesn't feel normal... stone before wood?"]
+			id: "180B0E3EF3C75297"
+			rewards: [{
+				count: 16
+				id: "7AFB8A3C21286E50"
+				item: "minecraft:bread"
+				type: "item"
+			}]
+			tasks: [{
+				id: "14A4DA5DACB8933A"
+				item: "dotv:stone_crafter"
+				type: "item"
+			}]
+			title: "This is different"
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"180B0E3EF3C75297"
+				"41A1C66165CA60D3"
+			]
+			description: ["Using the stone crafter, infuse some dirt with stone essence to get cobblestone!"]
+			id: "14AF5C12156FA7FD"
+			rewards: [{
+				count: 32
+				id: "5AACF0DBC5CA6972"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "191908C82F47C6E2"
+				item: { Count: 8b, id: "minecraft:cobblestone" }
+				type: "item"
+			}]
+			title: "More to craft with"
+			x: -3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["180B0E3EF3C75297"]
+			id: "41A1C66165CA60D3"
+			rewards: [{
+				count: 48
+				id: "1259321EA44395A9"
+				item: "minecraft:dirt"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "363842363385E3DC"
+				item: "minecraft:dirt"
+				type: "item"
+			}]
+			title: "Just a bit off the top..."
+			x: -7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"14AF5C12156FA7FD"
+				"565822D784142F3A"
+			]
+			description: ["Infuse some cobblestone with wood essence to get some moss!"]
+			id: "0D65792B8C3C5841"
+			rewards: [{
+				id: "65135A46F0E9E044"
+				item: "minecraft:bucket"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "0AF5441317D2ACF2"
+				item: "minecraft:moss_block"
+				type: "item"
+			}]
+			title: "Let there be life!"
+			x: -5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["565822D784142F3A"]
+			description: ["These seeds can be used on a variety of blocks to turn them into different crops! A list has been added to JEI to show you what blocks they turn into."]
+			id: "0D3E7A9E8B4536D6"
+			tasks: [{
+				count: 16L
+				id: "15194DC43CF1CA70"
+				item: { Count: 16b, id: "dotv:mystical_seeds" }
+				type: "item"
+			}]
+			title: "Dreaming of Crops"
+			x: 5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0D3E7A9E8B4536D6"]
+			description: ["Collect at least one of each vanilla crop."]
+			id: "0F8E8D8DC768F931"
+			rewards: [{
+				count: 64
+				id: "6BA2491537A4C75D"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "33CF76069563EED0"
+					item: "minecraft:potato"
+					type: "item"
+				}
+				{
+					id: "2AEC0786EFFC9F13"
+					item: "minecraft:beetroot"
+					type: "item"
+				}
+				{
+					id: "32416B9A493A4A0F"
+					item: { Count: 2b, id: "minecraft:carrot" }
+					type: "item"
+				}
+				{
+					id: "65471B9D0D2A2BC2"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					id: "7486DB2A9BD08110"
+					item: "minecraft:melon_slice"
+					type: "item"
+				}
+				{
+					id: "67090A2F581E9DFC"
+					item: "minecraft:pumpkin"
+					type: "item"
+				}
+			]
+			title: "The Vanilla Crops"
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"0D3E7A9E8B4536D6"
+				"5CF871FC9F1A9E13"
+			]
+			description: ["Craft some sand to grow sugarcane and cactus on"]
+			id: "4394EC513A2054AE"
+			rewards: [{
+				count: 12
+				id: "4A2DF5BDB3C46BEE"
+				item: "minecraft:sand"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "2C889604DD936A61"
+				item: { Count: 4b, id: "minecraft:sand" }
+				type: "item"
+			}]
+			title: "Not all crops like dirt"
+			x: 5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0D3E7A9E8B4536D6"]
+			description: ["These crops can be obtained by using mystical seeds on sand"]
+			id: "7DB34ACCD30A29D0"
+			rewards: [{
+				id: "2FC02FDE1DAC16BB"
+				item: "botanypots:terracotta_botany_pot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "74D402BFEB773EB5"
+					item: { Count: 2b, id: "minecraft:cactus" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1516C69F99EA3912"
+					item: { Count: 2b, id: "minecraft:sugar_cane" }
+					type: "item"
+				}
+			]
+			title: "Even more crops"
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0D65792B8C3C5841"]
+			description: ["Suqeeze some water out of some moss into a bucket."]
+			id: "655768A0413C5BAE"
+			tasks: [{
+				id: "3A477C7DB6526E37"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
+			title: "Finally! Something to drink"
+			x: -5.5d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"655768A0413C5BAE"
+				"14AF5C12156FA7FD"
+			]
+			description: ["This definitely isn't how things go... magic before even getting your first piece of wood? Something is definitely wrong here."]
+			id: "1E19476888CA71C0"
+			tasks: [{
+				id: "31FD087AA0FA121A"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
+			title: "Magic? Already?"
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"7DB34ACCD30A29D0"
+				"4394EC513A2054AE"
+			]
+			description: ["Clay can be made with some earths and a wet, fibrous material"]
+			id: "76A87391ABA18CE0"
+			tasks: [{
+				count: 4L
+				id: "1EC81ECBD1283A6F"
+				item: "minecraft:clay"
+				type: "item"
+			}]
+			title: "Sand but Wet"
+			x: 3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1E19476888CA71C0"]
+			description: ["Use a petal apothecary to imbue some stone with the magic of this world."]
+			id: "686646392F67D454"
+			rewards: [{
+				id: "0588AF0FB09FF60B"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				count: 3L
+				id: "67C01E9C80F45601"
+				item: "dotv:mana_infused_stone"
+				type: "item"
+			}]
+			title: "But stones aren't petals"
+			x: -3.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["565822D784142F3A"]
+			description: ["Luckily you can make a new one with just wooden essence and a 2x2 crafting grid!"]
+			id: "6ABB18F8365EE3E7"
+			tasks: [
+				{
+					id: "51B651B07F8D7661"
+					item: "dotv:wooden_hoe_tool"
+					type: "item"
+				}
+				{
+					id: "76FD5364FF280221"
+					item: "dotv:wooden_tool_binding"
+					type: "item"
+				}
+			]
+			title: "I broke it >~<"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["76A87391ABA18CE0"]
+			description: ["Much like the stone and wood essence, you can right click on a clay block to get dirt essence."]
+			id: "56330FA35627FEE6"
+			rewards: [{
+				id: "76469B7F61AC3657"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				count: 16L
+				id: "2F54010D241AE4A6"
+				item: "mysticalagriculture:earth_essence"
+				type: "item"
+			}]
+			title: "The First of Four"
+			x: 5.5d
+			y: -4.5d
 		}
 	]
 	title: "As You Sleep"
