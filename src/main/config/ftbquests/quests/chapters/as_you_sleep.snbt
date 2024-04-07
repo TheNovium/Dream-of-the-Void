@@ -494,6 +494,31 @@
 			x: 5.5d
 			y: -4.5d
 		}
+		{
+			dependencies: ["686646392F67D454"]
+			description: ["You can use the mana-infused stone to create stone tools that are slightly better than their vanilla counterparts."]
+			id: "643B0152D9B9A8D2"
+			rewards: [{
+				count: 3
+				id: "2948FBE5992D6FB6"
+				item: "dotv:mana_infused_stone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "484F24084338B91F"
+				item: {
+					Count: 1b
+					id: "minecraft:stone_axe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Some Basic Tools"
+			x: -3.5d
+			y: -9.0d
+		}
 	]
 	title: "As You Sleep"
 }

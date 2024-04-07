@@ -26,6 +26,13 @@ ServerEvents.recipes(event => {
             'minecraft:sand',
             'minecraft:dirt'
         ]
+    );
+    event.shapeless(
+        Item.of('minecraft:grass_block', 1),
+        [
+            'minecraft:dirt',
+            'minecraft:moss_block'
+        ]
     )
 
     console.info("Vanilla Recipes Complete");
