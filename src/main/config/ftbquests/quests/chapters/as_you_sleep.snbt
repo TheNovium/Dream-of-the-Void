@@ -284,6 +284,12 @@
 			dependencies: ["565822D784142F3A"]
 			description: ["These seeds can be used on a variety of blocks to turn them into different crops! A list has been added to JEI to show you what blocks they turn into."]
 			id: "0D3E7A9E8B4536D6"
+			rewards: [{
+				count: 16
+				id: "29191CA76053FB92"
+				item: "dotv:mystical_seeds"
+				type: "item"
+			}]
 			tasks: [{
 				count: 16L
 				id: "15194DC43CF1CA70"
@@ -299,9 +305,9 @@
 			description: ["Collect at least one of each vanilla crop."]
 			id: "0F8E8D8DC768F931"
 			rewards: [{
-				count: 64
-				id: "6BA2491537A4C75D"
-				item: "minecraft:bone_meal"
+				count: 8
+				id: "472D0A5E736732EB"
+				item: "minecraft:glow_berries"
 				type: "item"
 			}]
 			tasks: [
@@ -518,6 +524,144 @@
 			title: "Some Basic Tools"
 			x: -3.5d
 			y: -9.0d
+		}
+		{
+			dependencies: ["12455A83C22E40C3"]
+			id: "00DE0ADB4468D082"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "1E3461EF782DA3B0"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"0D65792B8C3C5841"
+				"41A1C66165CA60D3"
+			]
+			description: ["Just smear some moss on top of some dirt and that should do the trick!"]
+			id: "16200148C06B3ADB"
+			rewards: [{
+				id: "3536185B1454603D"
+				type: "xp_levels"
+				xp_levels: 25
+			}]
+			tasks: [{
+				count: 4L
+				id: "13AA4D6C96FF5AF6"
+				item: { Count: 4b, id: "minecraft:grass_block" }
+				type: "item"
+			}]
+			title: "Who needs silk touch?"
+			x: -9.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["643B0152D9B9A8D2"]
+			description: ["Using your axe you can finally take a log from the tree you spawned near. This is one of the primary ingredients used to craft a crafting table!"]
+			id: "12455A83C22E40C3"
+			rewards: [{
+				count: 32
+				id: "201FBD6E3318DC08"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6CDECBC0EB0EE510"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			title: "Final Steps"
+			x: -1.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["565822D784142F3A"]
+			description: ["You can use some wood essence to craft yourself a basic wooden pickaxe, then you can make a basic cobble generator to start expanding your island!"]
+			id: "5456637649C07AB9"
+			rewards: [{
+				id: "62AA80DADFB74635"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5A26FE92ED6165AA"
+				item: {
+					Count: 1b
+					id: "minecraft:wooden_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Baby Tools"
+			x: 9.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5456637649C07AB9"]
+			description: ["You're going to need some hostile mob drops to continue. Make a mob spawning platform and wait for nightfall, good luck!"]
+			id: "136DE4934288FCF5"
+			rewards: [
+				{
+					id: "6FB8889B08BD74C7"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "38FFB397C6B2B828"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4799CB8CCC5C2B30"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3BBC3AEA1A4DFF78"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 2L
+				id: "5FBDC1D2A4AF93E4"
+				item: { Count: 2b, id: "dotv:vile_blend" }
+				type: "item"
+			}]
+			title: "Hardcore Mob Farming"
+			x: 9.0d
+			y: -6.0d
 		}
 	]
 	title: "As You Sleep"
