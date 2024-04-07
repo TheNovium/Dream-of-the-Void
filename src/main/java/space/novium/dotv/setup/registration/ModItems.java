@@ -14,6 +14,7 @@ public class ModItems {
     //Items
     public static final RegistryObject<Item> MANA_INFUSED_STONE = ITEMS.register("mana_infused_stone", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOODEN_HOE_TOOL = ITEMS.register("wooden_hoe_tool", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WOODEN_PICKAXE_TOOL = ITEMS.register("wooden_pickaxe_tool", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WOODEN_TOOL_BINDING = ITEMS.register("wooden_tool_binding", () -> new Item(new Item.Properties().stacksTo(1)));
     
     //Use Items

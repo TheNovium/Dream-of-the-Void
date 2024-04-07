@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dotv:item/wooden_pickaxe_tool"
+  }
+}

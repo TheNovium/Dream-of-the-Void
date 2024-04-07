@@ -33,6 +33,16 @@ ServerEvents.recipes(event => {
         }
     );
     event.shaped(
+        Item.of('dotv:wooden_pickaxe_tool', 1),
+        [
+            'EE',
+            ' E'
+        ],
+        {
+            E: 'mysticalagriculture:wood_essence'
+        }
+    );
+    event.shaped(
         Item.of('dotv:wooden_tool_binding', 1),
         [
             ' E',
