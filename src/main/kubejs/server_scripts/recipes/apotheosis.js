@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('minecraft:stone_axe', '{AttributeModifiers:[{Amount:0.029999999329447746d,AttributeName:"attributeslib:crit_chance",Name:"cmd-generated-modif",Operation:0,Slot:"mainhand",UUID:[I;-612987435,1767197828,-1628093794,-2077050212]},{Amount:1.0d,AttributeName:"forge:block_reach",Name:"cmd-generated-modif",Operation:0,Slot:"mainhand",UUID:[I;1388498967,-242792643,-1621406619,1047731126]}],Damage:0}'),
         [
-            'ss',
+            's ',
             'st'
         ],
         {
@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
         }
     );
     event.shaped(
-        Item.of('minecraft:stone_pickaxe', '{AttributeModifiers:[{Amount:0.07000000029802322d,AttributeName:"attributeslib:mining_speed",Name:"cmd-generated-modif",Operation:0,Slot:"offhand",UUID:[I;825761897,333859181,-1778387862,1770349840]},{Amount:1.0d,AttributeName:"forge:block_reach",Name:"cmd-generated-modif",Operation:0,Slot:"mainhand",UUID:[I;-2021669898,-1310637547,-1277844776,-1244948161]}],Damage:0}'),
+        Item.of('minecraft:stone_pickaxe', '{AttributeModifiers:[{Amount:0.07000000029802322d,AttributeName:"attributeslib:mining_speed",Name:"cmd-generated-modif",Operation:0,Slot:"mainhand",UUID:[I;825761897,333859181,-1778387862,1770349840]},{Amount:1.0d,AttributeName:"forge:block_reach",Name:"cmd-generated-modif",Operation:0,Slot:"mainhand",UUID:[I;-2021669898,-1310637547,-1277844776,-1244948161]}],Damage:0}'),
         [
             'ss',
             'ts'

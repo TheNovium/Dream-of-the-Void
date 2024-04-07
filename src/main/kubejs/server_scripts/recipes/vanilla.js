@@ -20,6 +20,13 @@ ServerEvents.recipes(event => {
         ]
     );
     event.shapeless(
+        Item.of('minecraft:wooden_pickaxe', 1),
+        [
+            'dotv:wooden_pickaxe_tool',
+            'dotv:wooden_tool_binding'
+        ]
+    );
+    event.shapeless(
         Item.of('minecraft:clay', 1),
         [
             '#dotv:fiber',

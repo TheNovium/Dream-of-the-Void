@@ -25,8 +25,7 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('dotv:wooden_hoe_tool', 1),
         [
-            'E ',
-            ' E'
+            'EE',
         ],
         {
             E: 'mysticalagriculture:wood_essence'
