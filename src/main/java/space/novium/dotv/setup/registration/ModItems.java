@@ -16,9 +16,10 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_HOE_TOOL = ITEMS.register("wooden_hoe_tool", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WOODEN_PICKAXE_TOOL = ITEMS.register("wooden_pickaxe_tool", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WOODEN_TOOL_BINDING = ITEMS.register("wooden_tool_binding", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> VILE_BLEND = ITEMS.register("vile_blend", () -> new Item(new Item.Properties()));
     
     //Use Items
-    public static final RegistryObject<Item> MYSTICAL_SEEDS = ITEMS.register("mystical_seeds", () -> new MysticalSeeds(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> MYSTICAL_SEEDS = ITEMS.register("mystical_seeds", () -> new MysticalSeeds(new Item.Properties()));
     
     //Block Items
     public static final RegistryObject<Item> STONE_CRAFTER_ITEM = ITEMS.register("stone_crafter", () -> new BlockItem(ModBlocks.STONE_CRAFTER.get(), new Item.Properties()));

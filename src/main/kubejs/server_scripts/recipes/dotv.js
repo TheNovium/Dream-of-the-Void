@@ -53,7 +53,16 @@ ServerEvents.recipes(event => {
         }
     );
 
-
+    //Shapeless
+    event.shapeless(
+        Item.of('dotv:vile_blend', 1),
+        [
+            'minecraft:rotten_flesh',
+            'minecraft:bone',
+            'minecraft:gunpowder',
+            'minecraft:string'
+        ]
+    )
 
     console.info("DotV Recipes Complete");
 })
